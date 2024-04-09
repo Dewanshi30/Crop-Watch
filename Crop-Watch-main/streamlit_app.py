@@ -31,7 +31,7 @@ def weed_model_prediction(test_image_path):
 
 def seed_model_prediction(seed_test_image_path):
     # Load the SavedModel (.pb format)
-    loaded_model = tf.saved_model.load(r"C:\Users\dewan\Desktop\Soybean Seeds - Copy\trained_soyabean_seed_model")
+    loaded_model = tf.saved_model.load(Crop-Watch-main/trained_soyabean_seed_model)
     
     # Preprocess the image
     seed_image = tf.keras.preprocessing.image.load_img(seed_test_image_path, target_size=(128, 128))
@@ -61,7 +61,7 @@ app_mode = st.sidebar.selectbox("Select Page",["Home","About","Disease Recogniti
 #Main Page
 if(app_mode=="Home"):
     st.header("PLANT DISEASE RECOGNITION SYSTEM")
-    image_path = "home_page.jpeg"
+    image_path = "Crop-Watch-main/home_page.jpeg"
     st.image(image_path,use_column_width=True)
     st.markdown("""
     Welcome to the Plant Disease Recognition System! 🌿🔍
