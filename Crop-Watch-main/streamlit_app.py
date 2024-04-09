@@ -31,7 +31,7 @@ def weed_model_prediction(test_image_path):
 
 def seed_model_prediction(seed_test_image_path):
     # Load the SavedModel (.pb format)
-    loaded_model = tf.saved_model.load(Crop-Watch-main/trained_soyabean_seed_model)
+    loaded_model = tf.saved_model.load("Crop-Watch-main/trained_soyabean_seed_model)
     
     # Preprocess the image
     seed_image = tf.keras.preprocessing.image.load_img(seed_test_image_path, target_size=(128, 128))
